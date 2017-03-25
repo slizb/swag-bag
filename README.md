@@ -1,6 +1,6 @@
 # Swag-Bag
 
-Swag-Bag is a convenient package for accessing the color pallettes and logos of your favorite sports teams.
+Swag-Bag is a convenient package for accessing the color palettes and logos of your favorite sports teams.
 
 ## Installation
 
