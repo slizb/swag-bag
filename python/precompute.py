@@ -31,23 +31,20 @@ def unpack_rgb(rgb_string):
     blue = int(rgb_list[2])
     return (red, green, blue)
 
-def rgb_to_cmyk():
+def rgb_to_cmyk(rgb_string):
+    # formula taken from http://www.rapidtables.com/convert/color/rgb-to-cmyk.htm
+    red, green, blue = unpack_rgb(rgb_string)
 
-    # RGB to CMYK conversion formula
-    # The R,G,B values are divided by 255 to change the range from 0..255 to 0..1:
-    # R' = R/255
-    # G' = G/255
-    # B' = B/255
-    # The black key (K) color is calculated from the red (R'), green (G') and blue (B') colors:
-    # K = 1-max(R', G', B')
-    # The cyan color (C) is calculated from the red (R') and black (K) colors:
-    # C = (1-R'-K) / (1-K)
-    # The magenta color (M) is calculated from the green (G') and black (K) colors:
-    # M = (1-G'-K) / (1-K)
-    # The yellow color (Y) is calculated from the blue (B') and black (K) colors:
-    # Y = (1-B'-K) / (1-K)
-    pass
+    r = red / 255
+    g = green / 255
+    b = blue / 255
 
+    k = 1 - max(r, g, b)
+    c = (1 - r - k) / (1 - k)
+    m = (1 - g - k) / (1 - k)
+    y = (1 - b - k) / (1 - k)
+
+    return [c, m, y, k]
 
 for i, row in enumerate(df.colors):
     # hex
