@@ -18,6 +18,7 @@ Then, you can hook into your favorite plotting package...
 ``` python
 import seaborn as sns
 import pandas as pd
+
 df = pd.DataFrame([{'A':'Hodor', 'B':7},
                    {'A':'Bran', 'B':3}])
 
