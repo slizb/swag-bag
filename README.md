@@ -10,6 +10,7 @@ python and R packages are both currently under construction.  Stay tuned for ins
 
 ``` python
 from swagbag import swag
+
 colors = swag.TeamColors("Chicago Bulls", 2, "hex")
 ```
 
