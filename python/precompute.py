@@ -10,6 +10,13 @@ def hex_to_rgb(value):
     return rgb_str
 
 
+def add_hash_to_hex_codes(hex_list):
+    hashed = []
+    for i, unhashed in enumerate(hex_list):
+        hashed.append('#' + unhashed)
+    return hashed
+
+
 def rgb_to_hex(rgb_string):
     red, green, blue = unpack_rgb(rgb_string)
     return '%02x%02x%02x' % (red, green, blue)
@@ -43,7 +50,7 @@ def rgb_to_cmyk(rgb_string):
 
 
 def fill_color_styles():
-    with open('../teams.json') as data_file:
+    with open('../data/teams.json') as data_file:
         data = json.load(data_file)
 
     df = pd.DataFrame(data)
@@ -74,7 +81,9 @@ def fill_color_styles():
 
     df = df.drop('colors', axis=1)
 
-    df.to_csv('../team_color_frame.csv', index=False)
+    df['hex'] = df['hex'].apply(lambda x: add_hash_to_hex_codes(x))
+
+    df.to_pickle('../data/team_color_frame.pkl')
 
 
 if __name__ == "__main__":
