@@ -1,40 +1,29 @@
 
-import json
 import pandas as pd
 
-with open('teams.json') as data_file:
-    data = json.load(data_file)
 
-df = pd.DataFrame(data)
+df = pd.read_pickle('../data/team_color_frame.pkl')
 
 
 class TeamColors:
 
     def get_colors(self, team, n, style):
         frame = df[df.name == team].reset_index()
-        colors = frame.colors[0][style]
-        top_n_colors = colors[:n]
+        colors = frame[style]
+        top_n_colors = colors[0][:n]
         if style == 'rgb':
             top_n_colors = [self.unpack_rgb(x) for x in top_n_colors]
         return top_n_colors
 
     @staticmethod
     def unpack_rgb(rgb_string):
-        return rgb_string.split()
-
-    @staticmethod
-    def hex_to_rgb(value):
-        value = value.lstrip('#')
-        lv = len(value)
-        return tuple(int(value[i:i + lv // 3], 16) for i in range(0, lv, lv // 3))
-
-    @staticmethod
-    def rgb_to_hex(red, green, blue):
-        return '#%02x%02x%02x' % (red, green, blue)
-
+        rgb_list = rgb_string.split()
+        red = int(rgb_list[0])
+        green = int(rgb_list[1])
+        blue = int(rgb_list[2])
+        return (red, green, blue)
 
 class TeamLogos:
     pass
 
-
-print(TeamColors().get_colors("Chicago Bulls", 2, 'rgb'))
+print(TeamColors().get_colors("Arsenal", 5, 'hex'))
