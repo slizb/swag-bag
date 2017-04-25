@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 
 
+# todo: scrape ncaa teams from here http://dynasties.operationsports.com/team-colors.php?sport=ncaa
+# todo: hook in colormath
+
 def hex_to_rgb(value):
     lv = len(value)
     rgb_list = [int(value[i:i + lv // 3], 16) for i in range(0, lv, lv // 3)]
