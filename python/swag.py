@@ -1,5 +1,6 @@
 
 import pandas as pd
+import requests
 
 
 df = pd.read_pickle('../data/team_color_frame.pkl')
@@ -23,7 +24,15 @@ class TeamColors:
         blue = int(rgb_list[2])
         return (red, green, blue)
 
-class TeamLogos:
-    pass
 
-print(TeamColors().get_colors("Arsenal", 5, 'hex'))
+class TeamLogos:
+
+    @staticmethod
+    def get_logo(file_out):
+        img_data = requests.get('https://raw.githubusercontent.com/jimniels/teamcolors/master/static/img/nba/chicago-bulls.svg')
+        with open(file_out, 'wb') as handler:
+            handler.write(img_data.content)
+        print('hodor')
+
+# print(TeamColors().get_colors("Arsenal", 5, 'hex'))
+print(TeamLogos.get_logo('my_logo.svg'))
