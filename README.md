@@ -34,7 +34,7 @@ Logos are queryable too...
 import matplotlib.pyplot as plt
 
 logo = swag.TeamLogos("Chicago Bulls")
-plt.imshow(img)
+plt.imshow(logo)
 ```
 ![bulls logo](https://github.com/slizb/swag-bag/blob/master/python/examples/bulls_logo.png "bulls logo")
 
