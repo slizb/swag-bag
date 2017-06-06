@@ -28,4 +28,14 @@ sns.barplot(x='A', y='B', data=df, palette=my_palette, saturation=1)
 ```
 ![bulls plot](https://github.com/slizb/swag-bag/blob/master/python/examples/bulls.png "bulls plot")
 
+Logos are queryable too...
+
+``` python
+import matplotlib.pyplot as plt
+
+logo = swag.TeamLogos("Chicago Bulls")
+plt.imshow(img)
+```
+![bulls logo](https://github.com/slizb/swag-bag/blob/master/python/examples/bulls_logo.png "bulls logo")
+
 *_NOTE: this project is in beta, so documentation may lag from present usage_
