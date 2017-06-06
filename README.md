@@ -36,6 +36,6 @@ import matplotlib.pyplot as plt
 logo = swag.TeamLogos("Chicago Bulls")
 plt.imshow(logo)
 ```
-![bulls logo](https://github.com/slizb/swag-bag/blob/master/python/examples/bulls_logo.png "bulls logo")
+<img src="https://github.com/slizb/swag-bag/blob/master/python/examples/bulls_logo.png" width="500">
 
 *_NOTE: this project is in beta, so documentation may lag from present usage_
