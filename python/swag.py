@@ -1,6 +1,8 @@
 
 import pandas as pd
-import requests
+import cairosvg
+import PIL
+import os
 
 
 df = pd.read_pickle('../data/team_color_frame.pkl')
@@ -26,13 +28,19 @@ class TeamColors:
 
 
 class TeamLogos:
+    pass
 
-    @staticmethod
-    def get_logo(file_out):
-        img_data = requests.get('https://raw.githubusercontent.com/jimniels/teamcolors/master/static/img/nba/chicago-bulls.svg')
-        with open(file_out, 'wb') as handler:
-            handler.write(img_data.content)
-        print('hodor')
+
+class Util:
+
+    def read_svg_from_web(self, url, size):
+        cairosvg.svg2png(url=url,
+                         write_to='temp_swag.png',
+                         scale=size)
+        img = PIL.Image.open('temp_swag.png')
+        os.remove('temp_swag.png')
+        return img
+
 
 # print(TeamColors().get_colors("Arsenal", 5, 'hex'))
 print(TeamLogos.get_logo('my_logo.svg'))
