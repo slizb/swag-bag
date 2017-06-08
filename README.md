@@ -1,5 +1,7 @@
 # Swag-Bag
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Swag-Bag is a convenient package for accessing the color palettes and logos of your favorite sports teams.
 
 ## Installation
