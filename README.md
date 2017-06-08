@@ -1,5 +1,7 @@
 # Swag-Bag
 
+[![license](https://img.shields.io/github/license/slizb/swag-bag.svg)]()
+
 Swag-Bag is a convenient package for accessing the color palettes and logos of your favorite sports teams.
 
 ## Installation
