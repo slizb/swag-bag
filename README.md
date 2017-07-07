@@ -34,8 +34,9 @@ df = pd.DataFrame([{'A':'Hodor', 'B':7},
 my_palette = sns.color_palette(colors)
 sns.barplot(x='A', y='B', data=df, palette=my_palette, saturation=1)
 ```
-![bulls plot](https://github.com/slizb/swag-bag/blob/master/python/swagbag/examples/bulls.png "bulls plot")
-
+<p align="center">
+    <img src="https://github.com/slizb/swag-bag/blob/master/python/swagbag/examples/bulls.png" alt="bulls plot">
+</p>
 Logos are queryable too...
 
 ``` python
@@ -44,6 +45,8 @@ import matplotlib.pyplot as plt
 logo = swag.TeamLogos("Chicago Bulls")
 plt.imshow(logo)
 ```
-<img src="https://github.com/slizb/swag-bag/blob/master/python/swagbag/examples/bulls_logo.png" width="500">
+<p align="center">
+    <img src="https://github.com/slizb/swag-bag/blob/master/python/swagbag/examples/bulls_logo.png" width="500">
+</p>
 
 *_NOTE: this project is in beta, so documentation may lag from present usage_
