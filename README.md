@@ -8,7 +8,7 @@
     <img src="https://github.com/slizb/swag-bag/blob/master/swag-bag.png" alt="swag-bag logo">
 </p>
 
-Swag-Bag is a convenient package for accessing the color palettes and logos of your favorite sports teams.
+Swag-Bag is a convenient package for accessing the color palettes and logos of your favorite sports teams.  It enables you to create beautifully themed visualizations with a little *swag*.
 
 ## Installation
 
