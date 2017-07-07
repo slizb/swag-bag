@@ -6,5 +6,5 @@ setup(name='swagbag',
       author='Bradley Sliz',
       author_email='bradsliz@gmail.com',
       url='https://github.com/slizb/swag-bag',
-      packages=['swagbag'],
+      packages=['python/swagbag']
      )

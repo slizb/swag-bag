@@ -3,13 +3,21 @@ sudo: false
 language: python
 
 python:
-  - 2.7
+  - 3.4
+  - 3.5
+  - 3.6
 
 install:
   - pip install codecov
+  - pip install pandas
+  - pip install cairosvg
+  - python ./python/setup.py install
+  
+before_script:
+  - export PYTHONPATH=$PYTHONPATH:$(pwd)
 
 script:
-  - coverage run python/tests.py
+  - coverage run python/swagbag/tests/test_swag.py
 
 after_success:
   - codecov

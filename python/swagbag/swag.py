@@ -3,9 +3,11 @@ import pandas as pd
 import cairosvg
 import PIL
 import os
+import data
 
+data_path = data.__path__
 
-df = pd.read_pickle('../data/team_color_frame.pkl')
+df = pd.read_pickle(data_path[0] + '/team_color_frame.pkl')
 
 
 class TeamColors:
@@ -40,7 +42,3 @@ class Util:
         img = PIL.Image.open('temp_swag.png')
         os.remove('temp_swag.png')
         return img
-
-
-# print(TeamColors().get_colors("Arsenal", 5, 'hex'))
-print(TeamLogos.get_logo('my_logo.svg'))
