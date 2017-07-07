@@ -4,6 +4,10 @@
 [![Codecov](https://img.shields.io/codecov/c/github/slizb/swag-bag.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+<p align="center">
+    <img src="https://github.com/slizb/swag-bag/blob/master/swag-bag.png" alt="swag-bag logo">
+</p>
+
 Swag-Bag is a convenient package for accessing the color palettes and logos of your favorite sports teams.
 
 ## Installation
