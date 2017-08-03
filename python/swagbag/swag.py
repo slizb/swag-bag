@@ -33,6 +33,10 @@ class TeamLogos:
 
     def get_logo(self, team):
         frame = df[df.name == team].reset_index()
+        url = frame.logo_url[0]
+        print("url is:", url)
+        img = Util().read_svg_from_web(url, 50)
+        return img
 
 
 class Util:
