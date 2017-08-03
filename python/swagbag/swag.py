@@ -31,11 +31,11 @@ class TeamColors:
 
 class TeamLogos:
 
-    def get_logo(self, team):
+    def get_logo(self, team, size=1):
         frame = df[df.name == team].reset_index()
         url = frame.logo_url[0]
         print("url is:", url)
-        img = Util().read_svg_from_web(url, 50)
+        img = Util().read_svg_from_web(url, size)
         return img
 
 
