@@ -9,6 +9,10 @@ sys.path.append(my_wd + '/python')
 
 from swagbag import swag
 
+class TestTeamLogos(unittest.TestCase):
+    def test_fake_team_returns_nothing(self):
+        img = swag.TeamLogos("Decatur Fakers")
+        self.assertNotIsInstance(img, swag.PIL.PngImagePlugin.PngImageFile)
 
 class TestUtil(unittest.TestCase):
     def test_read_svg_from_web(self):
