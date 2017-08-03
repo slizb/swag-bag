@@ -30,7 +30,9 @@ class TeamColors:
 
 
 class TeamLogos:
-    pass
+
+    def get_logo(self, team):
+        frame = df[df.name == team].reset_index()
 
 
 class Util:
